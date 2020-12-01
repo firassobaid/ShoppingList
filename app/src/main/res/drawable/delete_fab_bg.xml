@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+
+            <size
+                android:width="56dp"
+                android:height="56dp" />
+
+            <gradient
+                android:angle="270"
+                android:endColor="#fc3e84"
+                android:startColor="#ffa58c"
+                android:type="linear" />
+        </shape>
+
+    </item>
+
+    <item
+        android:drawable="@drawable/ic_delete_black"
+        android:gravity="center" />
+
+</layer-list>

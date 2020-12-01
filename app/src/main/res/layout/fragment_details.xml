@@ -28,16 +28,16 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Name" />
 
-        <Button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/detailsDeleteProductButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
             android:layout_marginBottom="32dp"
             android:onClick="@{() -> detailsViewModel.deleteButtonPress()}"
-            android:text="Delete"
+            android:src="@drawable/delete_fab_bg"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
