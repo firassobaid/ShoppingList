@@ -28,6 +28,10 @@ class ShoppingListViewModel(repository: ProductsRepository) : ViewModel() {
 
     val products: LiveData<List<Product>> = _products
 
+    val empty: LiveData<Boolean> = Transformations.map(_products) {
+        it.isEmpty()
+    }
+
     private fun filterProducts(productsResult: Result<List<Product>>): LiveData<List<Product>> {
         val result = MutableLiveData<List<Product>>()
         if (productsResult is Result.Success) {
