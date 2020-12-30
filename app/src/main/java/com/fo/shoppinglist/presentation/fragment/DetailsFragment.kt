@@ -62,8 +62,6 @@ class DetailsFragment : Fragment() {
     }
 
     private fun navigateToShoppingList() {
-//        val action = DetailsFragmentDirections.actionDetailsFragmentToShoppingListFragment()
-//        findNavController().navigate(action)
         findNavController().popBackStack()
     }
 

@@ -18,9 +18,6 @@ class ShoppingListViewModel(repository: ProductsRepository) : ViewModel() {
     private val _singleEvent = MutableLiveData<SingleEvent<ShoppingListSingleEventState>>()
     val singleEvent: LiveData<SingleEvent<ShoppingListSingleEventState>> = _singleEvent
 
-    private val _loading = MutableLiveData<Boolean>()
-    val loading: LiveData<Boolean> = _loading
-
     private val _products = repository.observeProducts()
             .distinctUntilChanged()
             .switchMap { filterProducts(it) }
@@ -37,7 +34,6 @@ class ShoppingListViewModel(repository: ProductsRepository) : ViewModel() {
         if (productsResult is Result.Success) {
             result.value = productsResult.data
         } else {
-            //Show error state
             result.value = emptyList()
         }
         return result
